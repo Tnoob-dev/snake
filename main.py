@@ -1,6 +1,5 @@
 import typer
 from typing_extensions import Annotated
-from pathlib import Path
 from utils.io_utils import inputOutputCommands
 
 
