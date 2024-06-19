@@ -3,6 +3,7 @@ from typing import List
 from typing_extensions import Annotated
 from utils.io_utils import inputOutputCommands
 
+__version__ = "2.0.0"
 
 app = typer.Typer()
 
