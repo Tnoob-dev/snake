@@ -65,7 +65,6 @@ def numbers_lines(file_name: Annotated[str, typer.Argument()]):
     """
     Count number of lines from a file
     """
-
     content = inputOutputCommands(file_name, "r+")
 
     data = [i for i in content.split("\n")]
