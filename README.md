@@ -17,5 +17,13 @@ Just like the normal cat command, we can write, read, copy and do all the same t
   - snake cf newfile.txt copyofnewfile.txt
 
 ### To mix the content of a lot of files in one only file:
-  - cat file1 file2 file3 file4 > newfile
-  - snake mixf file1 file2 file3 file4 newfile
+  - cat file1.txt file2.txt file3.txt file4.txt > newfile.txt
+  - snake mixf file1.txt file2.txt file3.txt file4.txt newfile.txt
+
+### To mark the end of a line with de $ sign
+  - cat -E file.txt
+  - snake end file.txt
+
+### To count the total lines of a file
+  - cat -n file.txt
+  - snake lines file.txt
