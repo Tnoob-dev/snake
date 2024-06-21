@@ -1,5 +1,8 @@
-import typer
+"""
+Main file from snake py
+"""
 from typing import List
+import typer
 from typing_extensions import Annotated
 from utils.io_utils import inputOutputCommands
 
@@ -31,7 +34,8 @@ def create_file(file_name: Annotated[str, typer.Argument()]):
     inputOutputCommands(file_name, "w+", '\n'.join(data))
 
 @app.command("cf")
-def copy_content(old_file: Annotated[str, typer.Argument()], new_file: Annotated[str, typer.Argument()]):
+def copy_content(old_file: Annotated[str, typer.Argument()],
+                 new_file: Annotated[str, typer.Argument()]):
     """
     Copy content from a old file to a new file
     """
@@ -39,7 +43,8 @@ def copy_content(old_file: Annotated[str, typer.Argument()], new_file: Annotated
     inputOutputCommands(new_file, "w+", content)
 
 @app.command("mixf")
-def mix_content(files: Annotated[List[str], typer.Argument()], newfile: Annotated[str, typer.Argument()]):
+def mix_content(files: Annotated[List[str], typer.Argument()],
+                newfile: Annotated[str, typer.Argument()]):
     """
     Mix files into a new file
     """
@@ -47,7 +52,6 @@ def mix_content(files: Annotated[List[str], typer.Argument()], newfile: Annotate
     for file in files:
         content = inputOutputCommands(file, "r+")
         data.append(content)
-    
     inputOutputCommands(newfile, "w+", '\n'.join(data))
 
 @app.command("end")
