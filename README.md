@@ -20,7 +20,7 @@ Just like the normal cat command, we can write, read, copy and do all the same t
   - cat file1.txt file2.txt file3.txt file4.txt > newfile.txt
   - snake mixf file1.txt file2.txt file3.txt file4.txt newfile.txt
 
-### To mark the end of a line with de $ sign
+### To mark the end of a line with the $ sign
   - cat -E file.txt
   - snake end file.txt
 
